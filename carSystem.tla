@@ -55,7 +55,7 @@ relabeling(data, newlabel) ==
     newlabel[3] = data \* Corresponds to newlabel.data in the article, newlabel[2] is for containers
 
 extract_privilege(label, user, data) == \*Takes a user, and a label, returns if the label authorizes the user to access the specified data.
-        user \in label[2][2] /\ data \in label[2]
+        user \in label[2][2] /\ data \in label[3]
 
 \* Sample transactions in the distributed ledger
 Transaction(recordId, renterAddress, ownerAddress, transactionValue) ==
